@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Define the Jobs model
+model Job {
+  id            String    @id @default(uuid())
+  title         String
+  description   String
+  requirements  String[]
+  skills        String[]  // New field for skills
+  qualifications String    // Changed field to represent college degree
+  postedAt      DateTime  @default(now())
+}
+
+model Applicant{
+  id            String    @id @default(uuid())
+  name          String
+  email         String
+  phone         String
+  resume        String
+  coverLetter   String
+  skills        String[]
+  experience    String[]
+  education     String[]
+  appliedAt     DateTime  @default(now())
+}
