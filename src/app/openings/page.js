@@ -1,10 +1,13 @@
 "use client"
 import React, { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import Jobsheader from './components/Jobsheader';
 import Jobcard from './components/JobCard';
+import MobileCard from './components/MobileCard'; // Import your mobile card component
 
 const Page = () => {
   const [jobs, setJobs] = useState([]);
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 600px)' }); // Change this to the breakpoint you want
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,14 +32,14 @@ const Page = () => {
   return (
     <>
       <Jobsheader/>
-      <section className='p-40 '>
+      <section className='p-4 md:p-40 grid grid-cols-1 gap-4'>
         <h1 className='text-5xl font-bold'>Latest Jobs{
           jobs.length > 0 && ` (${jobs.length})`
         
         }</h1>
         {
           jobs.map((job) => (
-            <Jobcard job={job} key={job.id} />
+            isSmallScreen ? <MobileCard job={job} key={job.id} /> : <Jobcard job={job} key={job.id} />
           ))
         }
       </section>
