@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Jobsheader from './components/Jobsheader';
 import Jobcard from './components/JobCard';
 
-const page = () => {
+const Page = () => {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
@@ -44,4 +44,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
