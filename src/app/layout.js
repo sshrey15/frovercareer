@@ -8,6 +8,17 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Frover Careers",
   description: "Find your next job at Frover",
+  image: "/frover-logo.png",icons: {
+    icon: [
+
+      '/favicon.ico?v=4',
+    ],
+    apple: [
+      '/apple-touch-icon.png?v=4',
+    ],
+    shortcut: ['/apple-touch-icon.png?v=4'],
+
+  }
 };
 
 export default function RootLayout(
