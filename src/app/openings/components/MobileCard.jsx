@@ -13,7 +13,7 @@ import { differenceInDays } from 'date-fns'
 const Jobcard = ({ job }) => {
     const daysAgo = differenceInDays(new Date(), new Date(job.postedAt))
     return (
-        <Card className="mt-10 p-10 grid grid-cols-1 md:grid-cols-2 border-t-4 border-purple-500 gap-4">
+        <Card className="mt-10 grid grid-cols-1 md:grid-cols-2 border-t-4 border-purple-500 gap-4">
             <CardHeader>
                 <div className='flex flex-col md:flex-row gap-3 items-center'>
                     <div className='flex gap-10'>
