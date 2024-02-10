@@ -31,9 +31,9 @@ const Page = () => {
 
   return (
     <>
-      <Jobsheader/>
+       {!isSmallScreen && <Jobsheader/>}
       <section className='p-4 md:p-40 grid grid-cols-1 gap-4'>
-        <h1 className='text-5xl font-bold'>Latest Jobs{
+        <h1 className='text-4xl font-bold'>Latest Jobs{
           jobs.length > 0 && ` (${jobs.length})`
         
         }</h1>

@@ -5,7 +5,7 @@ import LandingJobcard from './LandingJobcard';
 import { useMediaQuery } from 'react-responsive';
 import React, { useState, useEffect } from 'react';
 import MobileCard from '@/app/openings/components/MobileCard';
-// import  {Button}  from '@/components/ui/button';
+
 
 const images = [
     '/bg4.png',
@@ -17,8 +17,8 @@ const images = [
 const CareerPage = () => {
     const [jobs, setJobs] = useState([]);
     const isSmallScreen = useMediaQuery({ query: '(max-width: 600px)' }); // Change this to the breakpoint you want
-
     const [currentImage, setCurrentImage] = useState(images[0]);
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -38,7 +38,10 @@ const CareerPage = () => {
         };
 
         fetchData(); // Call the fetchData function
-    }, []);
+    }, [
+        // Add any dependencies here
+
+    ]);
 
 
     useEffect(() => {
@@ -53,7 +56,9 @@ const CareerPage = () => {
         return () => {
             clearInterval(timer);
         };
-    }, []);
+    }, [
+
+    ]);
     return (
         <div className="font-sans text-gray-900 antialiased ">
             <section id="landing" className="h-[50vh] flex items-center justify-center text-center p-6 relative">
@@ -67,7 +72,7 @@ const CareerPage = () => {
 
             </section>
 
-            <section id="culture" className="mb-6  flex p-10 bg-gray-100 flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 items-center">
+            <section id="culture" className="mb-6 p-5  flex md:p-10 bg-gray-100 flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 items-center">
 
                 <div className="w-full m-5 lg:w-1/2">
                     <iframe
@@ -90,7 +95,7 @@ const CareerPage = () => {
                 </div>
             </section>
 
-            <section id="jobs" className="mb-6 p-10 ">
+            <section id="jobs" className="mb-6 md:p-10 p-5 ">
                 <div className="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-16">
 
                     <div className="md:w-1/2 text-start m-5">
@@ -129,16 +134,13 @@ const CareerPage = () => {
                     </div>
                 </div>
             </section>
-            <section id="jobs" className="mb-6 p-20 bg-[#D9D9D9] bg-opacity-50 ">
-                <h2 className="text-4xl font-bold mb-2">Job Openings</h2>
-
+            <section id="jobs" className="p-5 md:p-20 bg-[#D9D9D9] bg-opacity-50 ">
+                <h2 className="text-2xl text-[#5B21FF] font-bold mb-2">Job Openings</h2>
                 {
                     jobs.map((job) => (
-                       isSmallScreen? <MobileCard job={job} key={job.id} />: <LandingJobcard job={job} key={job.id} />
+                        isSmallScreen ? <MobileCard job={job} key={job.id} /> : <LandingJobcard job={job} key={job.id} />
                     ))
                 }
-                 
-
             </section>
 
 
