@@ -31,7 +31,7 @@ const CareerPage = () => {
                 <div className="absolute inset-0 bg-center bg-cover transition-opacity duration-500 ease-in-out" style={{ backgroundImage: `url(${currentImage})`, opacity: 0.5 }}></div>
                 <div className="relative z-10">
                     <h1 className="text-6xl font-bold mb-7 ">Start Your Career with <span className='text-6xl text-purple-500'>Frover</span></h1>
-                <Button variant="primary" className="bg-purple-500 hover:bg-purple-600" size="lg">Explore Jobs</Button>
+                <Button variant="default" className="bg-purple-500 hover:bg-purple-600" size="lg">Explore Jobs</Button>
                             </div>
             </section>
 
