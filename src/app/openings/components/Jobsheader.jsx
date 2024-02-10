@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import React from 'react'
 
@@ -11,7 +11,7 @@ const Jobsheader = () => {
 
   <div className="flex  items-center mt-4 bg-gray-100  justify-center">
     <Input className="w-[100vw] py-3 px-4 text-lg" type="email" placeholder="Search Jobs" />
-    <Button className="py-3 px-4 text-lg h-16" type="submit">Search</Button>
+    <button className="py-3 px-4 text-lg text-white h-16 bg-gray-900" type="submit">Search</button>
   </div>
 </section>
     </>

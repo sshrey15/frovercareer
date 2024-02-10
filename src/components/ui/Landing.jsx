@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import  {Button}  from '@/components/ui/button';
+// import  {Button}  from '@/components/ui/button';
 
 const images = [
     '/bg4.png',
@@ -31,7 +31,7 @@ const CareerPage = () => {
                 <div className="absolute inset-0 bg-center bg-cover transition-opacity duration-500 ease-in-out" style={{ backgroundImage: `url(${currentImage})`, opacity: 0.5 }}></div>
                 <div className="relative z-10">
                     <h1 className="text-6xl font-bold mb-7 ">Start Your Career with <span className='text-6xl text-purple-500'>Frover</span></h1>
-                <Button variant="default" className="bg-purple-500 hover:bg-purple-600" size="lg">Explore Jobs</Button>
+                <button variant="default" className="py-3 px-4 text-lg bg-purple-500 hover:bg-purple-600 text-white h-16" size="lg">Explore Jobs</button>
                             </div>
             </section>
 
