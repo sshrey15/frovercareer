@@ -26,12 +26,13 @@ const Jobcard = ({ job }) => {
     // }
     // const data = slowApi('', 1000)
     return (
-        <Card className="mt-10">
+        <Card className="mt-10 border-t-4 border-purple-500 ">
+            <hr className='text-purple-500'/>
             <CardHeader  >
                 <div className='flex gap-3 align-middle   '>
                     <div className='flex gap-10'>
                         <CardTitle className=" text-3xl font-bold hover:text-purple-500 cursor-pointer">{job.title}</CardTitle>
-                        <button variant="outline" className="bg-gray-900 p-2  shadow-lg  ml-4 text-white ">Apply Now</button>
+                        {/* <button variant="outline" className="bg-gray-900 p-2  shadow-lg  ml-4 text-white ">Apply Now</button> */}
 
 
                     </div>
