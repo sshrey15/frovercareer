@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import Button from './Button';
+import { Button } from './Button';
 
 const images = [
     '/bg4.png',
@@ -26,13 +26,13 @@ const CareerPage = () => {
         };
     }, []);
     return (
-        <div className="font-sans text-gray-900 antialiased">
+        <div className="font-sans text-gray-900 antialiased ">
             <section id="landing" className="h-[50vh] flex items-center justify-center text-center p-6 relative">
                 <div className="absolute inset-0 bg-center bg-cover transition-opacity duration-500 ease-in-out" style={{ backgroundImage: `url(${currentImage})`, opacity: 0.5 }}></div>
                 <div className="relative z-10">
                     <h1 className="text-6xl font-bold mb-7 ">Start Your Career with <span className='text-6xl text-purple-500'>Frover</span></h1>
-                    <Button props="Search Jobs" />
-                </div>
+                <Button variant="primary" className="bg-purple-500 hover:bg-purple-600" size="lg">Explore Jobs</Button>
+                            </div>
             </section>
 
             <section id="jobs" className="mb-6 p-10 bg-gray-100">
@@ -45,20 +45,20 @@ const CareerPage = () => {
                         </p>
                     </div>
                     <div className="md:w-1/2 grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div className="bg-white p-6  shadow-md text-center">
                             <h3 className="text-xl font-bold mb-2">Wide Range of Jobs</h3>
                             <p className="text-gray-700">
                                 Explore a diverse range of job opportunities across industries.
                             </p>
                         </div>
-                        <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div className="bg-white p-6  shadow-md text-center">
                             <h3 className="text-xl font-bold mb-2">Advanced Search</h3>
                             <p className="text-gray-700">
                                 Effortlessly find the perfect job with our advanced search
                                 features.
                             </p>
                         </div>
-                        <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div className="bg-white p-6  shadow-md text-center">
                             <h3 className="text-xl font-bold mb-2">Career Guidance</h3>
                             <p className="text-gray-700">
                                 Get valuable insights and guidance to boost your career growth.

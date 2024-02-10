@@ -22,7 +22,7 @@ const Navbar = () => {
         </div>
         <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? '' : 'hidden'} lg:block`}>
           <div className="text-sm lg:flex-grow ml-5">
-            <Link href="/home" className="block text-lg lg:inline-block lg:mt-0 text-gray-900 hover:text-purple-400 mr-4">
+            <Link href="/openings" className="block text-lg lg:inline-block lg:mt-0 text-gray-900 hover:text-purple-400 mr-4">
                
                 Openings
               
