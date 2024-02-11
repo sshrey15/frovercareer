@@ -9,6 +9,7 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { differenceInDays } from 'date-fns'
+import Link from 'next/link'
 
 
 const Jobcard = ({ job }) => {
@@ -19,8 +20,9 @@ const Jobcard = ({ job }) => {
             <CardHeader>
                 <div className='flex flex-col md:flex-row gap-3 items-center'>
                     <div className='flex gap-10'>
-                        <CardTitle className=" text-3xl md:text-4xl font-bold hover:text-purple-500 cursor-pointer">{job.title}</CardTitle>
-                        {/* <button variant="outline" className="bg-gray-900 p-1 w-[30vw] h-[5vh] shadow-lg ml-4 text-white ">Apply Now</button> */}
+                    <Link href={`/openings/${job.id}`}> 
+                        <CardTitle className=" text-3xl font-bold hover:text-purple-500 cursor-pointer">{job.title}</CardTitle>
+                        </Link>                        {/* <button variant="outline" className="bg-gray-900 p-1 w-[30vw] h-[5vh] shadow-lg ml-4 text-white ">Apply Now</button> */}
                     </div>
                 </div>
             </CardHeader>
