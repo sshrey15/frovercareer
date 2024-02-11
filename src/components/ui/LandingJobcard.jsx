@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card"
 // import { Button } from "@/components/ui/button"
 import { differenceInDays } from 'date-fns'
+import Link from 'next/link'
 
 const Jobcard = ({ job }) => {
     
@@ -32,7 +33,10 @@ const Jobcard = ({ job }) => {
             <CardHeader  >
                 <div className='flex gap-20 align-middle   '>
                     <div className='flex gap-10'>
+                        <Link href={`/openings/${job.id}`}>
                         <CardTitle className=" text-3xl font-bold hover:text-purple-500 cursor-pointer">{job.title}</CardTitle>
+                        </Link>
+                        
                     </div>
                     <div >
                     <button variant="outline" className="mr-2 m-1  p-2 border border-solid border-1 border-gray-500">{job.skills.join(', ')}</button>

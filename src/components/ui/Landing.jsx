@@ -137,7 +137,7 @@ const CareerPage = () => {
             <section id="jobs" className="p-5 md:p-20 bg-[#D9D9D9] bg-opacity-50 ">
                 <h2 className="text-2xl text-[#5B21FF] font-bold mb-2">Job Openings</h2>
                 {
-                    jobs.map((job) => (
+                    jobs.slice(0,3).map((job) => (
                         isSmallScreen ? <MobileCard job={job} key={job.id} /> : <LandingJobcard job={job} key={job.id} />
                     ))
                 }
