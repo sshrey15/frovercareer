@@ -32,7 +32,7 @@ const Page = ({ params }) => {
       <section className="bg-gray-100 h-[40vh] gap-10 p-6 sm:p-20 flex">
         <div>
         {job && <h1 className="text-6xl sm:text-7   xl hover:text-purple- font-bold">{job.title}</h1>}
-        <Link href="/">
+        <Link href={`/application/${job ? encodeURIComponent(job.title) : ''}`}>
        <button className="bg-purple-500 text-white p-2  mt-5">Apply Now</button>
        </Link>
         </div>
