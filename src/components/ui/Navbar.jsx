@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 flex items-center justify-between flex-wrap shadow-sm bg-white p-6">
+      <nav className="sticky top-0 z-20 flex items-center justify-between flex-wrap shadow-sm bg-white p-6">
 
         <Link href="/">
 
@@ -75,12 +75,12 @@ const Navbar = () => {
           <div className="text-sm lg:flex-grow ml-5">
             <Link href="/openings" className="text-md  underline underline-offset-2 float-end mr-10 lg:inline-block lg:mt-0 text-purple-700 hover:text-purple-400 ">
 
-              view all openings
+              View All Openings
 
             </Link>
 
           </div>
-          <button className='bg-gradient-to-r  from-[#5B21FF] from-20% to-[#8C19FF] text-md text-white p-3'>Contact Us</button>
+          <button className='bg-gradient-to-r rounded-full   from-[#5B21FF] from-20% to-[#8C19FF] text-md text-white py-2 px-5 font-bold'>Contact Us.</button>
         </div>
 
             </>

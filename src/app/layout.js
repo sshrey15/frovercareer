@@ -1,9 +1,9 @@
-import { Inter } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Frover Careers",
@@ -27,10 +27,11 @@ export default function RootLayout(
   ) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-      <Navbar />
-        {children}</body>
+      <body className={manrope.className}>
+        <Navbar />
+          {children}
         <Footer/>
+      </body>
     </html>
   );
 }
